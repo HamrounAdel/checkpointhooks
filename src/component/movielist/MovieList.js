@@ -1,10 +1,11 @@
 import React from 'react'
 import MovieCard from '../MovieCard'
 import './MovieList.css'
-function MovieList({movie}) {
+function MovieList({movie,inputTitle,inputRate}) {
   return (
     <div className='grid-container'>
-        {movie.map((el)=>  <MovieCard el={el}/>)}
+        {movie.filter((el)=> (el.title.toLowerCase().includes(inputTitle.toLowerCase().trim()))&& el.rate>=inputRate)
+        .map((el)=>  <MovieCard el={el}/>)}
     
     </div>
   )

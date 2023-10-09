@@ -40,6 +40,8 @@ function App() {
 const handelFilter=()=>{
 
 }
+const[inputTitle,setInputTitle]=useState('')
+const[inputRate,setInputRate]=useState('')
    
        
   
@@ -48,17 +50,18 @@ const handelFilter=()=>{
     <h1 style={{color:'red'}}>Movies film </h1><hr/>
     <div style={{display:'flex',justifyContent:'space-between'}}>
         <div> 
-          <MovieFilter   handelFilter={handelFilter} />
+          <MovieFilter   setInputTitle={setInputTitle} setInputRate={setInputRate}/>
         </div>
-        <th/>
-        <div>
-          <MovieAdd  ajout={ajout}/>
-        </div>
+        
+  
     
    </div>
     <hr/>
-    <div ><MovieList movie={movie}/></div>  
-     
+    <div ><MovieList inputTitle={inputTitle} inputRate={inputRate} movie={movie}/></div>  
+     <hr/>
+     <div>
+          <MovieAdd  ajout={ajout}/>
+        </div>
     </div>
   );
 }
