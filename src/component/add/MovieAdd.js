@@ -12,6 +12,7 @@ function MovieAdd({ajout}) {
           id:uuidv4(),
           title:titles,
           genre:genres,
+          checked:false,
           description:descriptions,
           rate:rates,
           sortie:2023,
@@ -23,7 +24,7 @@ function MovieAdd({ajout}) {
   
   return (
   <>
-  <h4 style={{color:'blueviolet'}}>Add movies</h4>
+  <h4 style={{color:'blueviolet'}}>Add movies</h4><br/>
 <div style={{display: 'grid', gap: '24px',gridTemplateColumns: 'repeat(4, 1fr)'}}>
   <form style={{display:'flex',justifyContent:'space-between'}}>
   <p>Title:</p>
