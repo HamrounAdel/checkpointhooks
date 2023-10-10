@@ -1,11 +1,13 @@
-
+body{
+  background-color: rgba(14, 13, 13, 0.846);
+}
   .App {
   
     margin: 0px 100px;
     font-weight: 400;
   
     font-family: Roboto,Arial,sans-serif;
-    color: #747474;
+    color: #ede4e4;
     padding: 10px 0px;
      -webkit-font-smoothing: antialiased;
      text-align: center;

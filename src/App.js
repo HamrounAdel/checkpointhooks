@@ -9,20 +9,21 @@ import data from './component/data';
 
 
 function App() {
-  const[movie,setMovie]=useState(data)
   
+  const[movie,setMovie]=useState(data)
+  const[inputTitle,setInputTitle]=useState('')
+   const[inputRate,setInputRate]=useState('')
+
+   //fonction pour ajouter movie film
   const ajout=(newMovie)=>{
     setMovie([...movie,newMovie])
   }
-    
+   // fonction pour supprimer  movie film 
 const handelDelet=(id)=>{
 setMovie(movie.filter((el)=> el.id!==id))
 }
-const[inputTitle,setInputTitle]=useState('')
-const[inputRate,setInputRate]=useState('')
-   
+ //fonction pour checked movie film
   const handelCheck=(id)=>{
-   
     setMovie(movie.map((el)=> el.id===id ?{...el,checked: !el.checked}  : el))
   }     
   

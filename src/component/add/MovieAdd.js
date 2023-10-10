@@ -25,6 +25,7 @@ function MovieAdd({ajout}) {
   return (
   <>
   <h4 style={{color:'blueviolet'}}>Add movies</h4><br/>
+  
 <div style={{display: 'grid', gap: '24px',gridTemplateColumns: 'repeat(4, 1fr)'}}>
   <form style={{display:'flex',justifyContent:'space-between'}}>
   <p>Title:</p>
